@@ -40,6 +40,8 @@ def main():
     sp.run(["convert", f"PyMuPDF-{version}/docs/pymupdf-logo.jpg", "pymupdf-logo.png"], check=True)
     sp.run(["doc2dash", "-n", "PyMuPDF", "-i", "pymupdf-logo.png", "-d", ".", "./PyMuPDF-docs"], check=True)
 
+    print("Docset is built: data/PyMuPDF.docset")
+
     if not args["--user-contrib"]:
         return
 
@@ -60,6 +62,8 @@ def main():
             "aliases": ["pymupdf"]
         }
         json.dump(data, file, indent=4)
+
+    print("Docset package for Dash-User-Contributions is built: data/user_contrib/PyMuPDF")
 
 
 
