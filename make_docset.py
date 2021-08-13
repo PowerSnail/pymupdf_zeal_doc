@@ -37,8 +37,8 @@ def main():
     sp.run([*command, URL.format(version=version)], check=True)
     sp.run(["tar", "-xf", "PyMuPDF.tar.gz"], check=True)
     sp.run(["sphinx-build", f"PyMuPDF-{version}/docs", "./PyMuPDF-docs"], check=True)
-    sp.run(["convert", f"PyMuPDF-{version}/docs/pymupdf-logo.jpg", "pymupdf-logo.png"], check=True)
-    sp.run(["doc2dash", "-n", "PyMuPDF", "-i", "pymupdf-logo.png", "-d", ".", "./PyMuPDF-docs"], check=True)
+    sp.run(["convert", f"PyMuPDF-{version}/docs/PyMuPDF.ico", "pymupdf.png"], check=True)
+    sp.run(["doc2dash", "-n", "PyMuPDF", "-i", "pymupdf.png", "-d", ".", "./PyMuPDF-docs"], check=True)
 
     print("Docset is built: data/PyMuPDF.docset")
 
