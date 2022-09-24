@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pymupdf_zeal_doc"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["PowerSnail <hj@powersnail.com>"]
 
@@ -9,7 +9,10 @@ python = "^3.8"
 doc2dash = "^2.3.0"
 Sphinx = "^4.1.2"
 docopt-ng = "^0.7.2"
-PyMuPDF = "^1.18.16"
+PyMuPDF = "^1.20.2"
+docutils = "<0.16"
+rst2pdf = "*"
+sphinx-rtd-theme = "*"
 
 [tool.poetry.dev-dependencies]
 
